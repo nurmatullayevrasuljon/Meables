@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="jquery-nice-select-1.1.0/jquery-nice-select-1.1.0/css/nice-select.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    <!-- <link rel="stylesheet" href="styles/style.css"> -->
+</head>
+
+<body>
+    <div class="container-fluid p-0" style="background-color: #f5f3ef;">
+        <!-- Modal -->
+        <div class="modal fade show" id="menu">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content border-0">
+                    <div class="modal-header">
+                        <h4 class="m-auto color-5">Buy Now</h4>
+                        <b>
+                            <a href="#" class="text-danger" data-dismiss="modal">X</a>
+                        </b>
+                    </div>
+                    <div class="modal-body d-flex justify-content-center">
+                        <div class="course-card shadow-none w-100">
+                            <img src="img/wepik-export.png" style="width: 250px !important;"><br>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <div class="col-8 d-flex justify-content-between p-0">
+                            <!-- <p class="color-6">Cheap and quality soft table</p><br> -->
+                            <div class="btn-group w-50">
+                                <button class="btn btn-light btn-sm">
+                                    <h5>-</h5>
+                                </button>
+                                <button class="btn btn-light btn-sm">
+                                    <h5>1</h5>
+                                </button>
+                                <button class="btn btn-light btn-sm">
+                                    <h5>+</h5>
+                                </button>
+                            </div>
+                            <button class="btn tn btn-outline-success" onclick="get()">
+                                Buy now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade show" id="menu_2">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content border-0">
+                    <div class="modal-header">
+                        <h4 class="m-auto color-5">Buy Now</h4>
+                        <b class="text-decoration-none">
+                            <a href="#" class="text-danger text-decoration-none" data-dismiss="modal">X</a>
+                        </b>
+                    </div>
+                    <div class="modal-body d-flex justify-content-center">
+                        <div class="course-card shadow-none w-100">
+                            <img src="img/wepik-export-2.png" style="width: 250px !important;"><br>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <div class="col-8 d-flex justify-content-between p-0">
+                            <!-- <p class="color-6">Cheap and quality soft table</p><br> -->
+                            <div class="btn-group w-50">
+                                <button class="btn btn-light btn-sm">
+                                    <h5>-</h5>
+                                </button>
+                                <button class="btn btn-light btn-sm">
+                                    <h5>1</h5>
+                                </button>
+                                <button class="btn btn-light btn-sm">
+                                    <h5>+</h5>
+                                </button>
+                            </div>
+                            <button class="btn tn btn-outline-success" onclick="get()">
+                                Buy now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade show" id="menu_3">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content border-0">
+                    <div class="modal-header">
+                        <h4 class="m-auto color-5">Buy Now</h4>
+                        <b>
+                            <a href="#" class="text-danger" data-dismiss="modal">X</a>
+                        </b>
+                    </div>
+                    <div class="modal-body d-flex justify-content-center">
+                        <div class="course-card shadow-none w-100">
+                            <img src="img/image-PhotoRoom (2) 1.png" style="width: 250px !important;"><br>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <div class="col-8 d-flex justify-content-between p-0">
+                            <!-- <p class="color-6">Cheap and quality soft table</p><br> -->
+                            <div class="btn-group w-50">
+                                <button class="btn btn-light btn-sm">
+                                    <h5>-</h5>
+                                </button>
+                                <button class="btn btn-light btn-sm">
+                                    <h5>1</h5>
+                                </button>
+                                <button class="btn btn-light btn-sm">
+                                    <h5>+</h5>
+                                </button>
+                            </div>
+                            <button class="btn tn btn-outline-success" onclick="get()">
+                                Buy now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Modal -->
+        
+        <div class="img">
+            <!-- navbar -->
+            <nav class="navbar navbar-expand-lg ps px-5" style="background-color: transparent;"
+                id="navvigationbarvisablehidden">
+                <button class="navbar-toggler d-lg-none n-icon" type="button" data-toggle="collapse"
+                    data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon n-icon">
+                        <img src="Img/Arrow 1.png" class="w-100">
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav between w-100">
+                        <li class="navbar-brand font-weight-bold" href="?page=main">
+                            <a class="nav-link menu-item text-dark">
+                                <img src="Img/Logo.png" alt="">
+                            </a>
+                        </li>
+                        <li class="nav-item offset-xl-4 offset-lg-1 offset-sm-0 offset-md-0" style="cursor: pointer;">
+                            <a href="index.html" class="nav-link menu-item text-white fs">Home</a>
+                        </li>
+                        <li class="nav-item" style="cursor: pointer;">
+                            <a href="about.html" class="nav-link menu-item text-white fs">About us</a>
+                        </li>
+                        <li class="nav-item" style="cursor: pointer;">
+                            <a href="shops.html" class="nav-link menu-item text-white fs">Shop</a>
+                        </li>
+                        <li class="nav-item" style="cursor: pointer;">
+                            <a href="category.html" class="nav-link menu-item text-white fs">Category</a>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-warning rounded-pill p-0"
+                                style="width: 150px;background-color: #ffa400 !important;">
+                                <a href="#" class="nav-link menu-item text-white" style="cursor: pointer;">Buy Now</a>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- /navbar -->
+
+            <!-- text -->
+            <div class="row mt">
+                <div class="col-6">
+                    <b class="color ml-5">
+                        Meablus
+                    </b><br>
+                    <b class="color-2 ml-5">Beautify space <br> &nbsp;&nbsp;&nbsp;&nbsp; Change the
+                        atmosphere</b><br><br>
+                    <span class="text-white ml-5 my-4">
+                        Lorem, ipsum dolor sit amet consectetur tempora adipisicing <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; elit. Perspiciatis tempora iusto
+                        qui
+                        suscipit expedita vel.
+                    </span><br><br>
+                    <button class="btn btn-warning rounded-pill p-2 text-white ml-5" style="width: 180px;">
+                        Explore Now
+                    </button>
+                    <button class="btn btn-outline-warning rounded-pill p-2 text-white ml-4" style="width: 180px;">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+            <!-- /text -->
+        </div>
+        <div class="row p-0" style="background-color: #f5f3ef;">
+            <b class="color-3 ml-5">Discover Our Hottest <br> Furniture Best Sellers</b>
+        </div>
+        <p class="text-dark ml-5 my-3" style="font-size: 18px;">Lorem, ipsum dolor sit amet consectetur adipisicingelit.
+            <br> Quaerat veniam dolor, tempore vero dignissimos fuga.
+        </p>
+        <div class="middle my-4">
+            <div class="container-fluid p-5 w-100">
+                <div class="owl-carousel nav-top">
+                    <div class="item">
+                        <div class="course-card shadow-none">
+                            <img src="img/wepik-export.png" style="width: 180px !important;"><br>
+                            <div class="pricing border-r p-3 w-75" style="background-color: #ffa400;">
+                                <b class="color-4">Modern Chair</b><br>
+                                <span class="text-white">$499</span>
+                                <button class="btn-click bg-white offset-8" data-toggle="modal" data-target="#menu">
+                                    <img src="img/Icon Cart.png" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="course-card shadow-none">
+                            <img src="img/wepik-export-2.png" style="width: 220px !important;"><br>
+                            <div class="pricing border-r mt-4 p-3 w-75" style="background-color: #ffa400;">
+                                <b class="color-4">Wood Chair</b><br>
+                                <span class="text-white">$499</span>
+                                <button class="btn-click bg-white offset-8" data-toggle="modal" data-target="#menu_2">
+                                    <img src="img/Icon Cart.png" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="course-card shadow-none">
+                            <img src="img/image-PhotoRoom (2) 1.png" style="width: 250px !important;"><br>
+                            <div class="pricing border-r mt-4 p-3 w-75" style="background-color: #ffa400;">
+                                <b class="color-4">Table Chair</b><br>
+                                <span class="text-white">$499</span>
+                                <button class="btn-click bg-white offset-8" data-toggle="modal" data-target="#menu_3">
+                                    <img src="img/Icon Cart.png" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="course-card shadow-none">
+                            <img src="img/wepik-export.png" style="width: 180px !important;"><br>
+                            <div class="pricing border-r p-3 w-75" style="background-color: #ffa400;">
+                                <b class="color-4">Table Wood</b><br>
+                                <span class="text-white">$499</span>
+                                <button class="btn-click bg-white offset-8" data-toggle="modal" data-target="#menu">
+                                    <img src="img/Icon Cart.png" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="course-card shadow-none">
+                            <img src="img/wepik-export-2.png" style="width: 220px !important;"><br>
+                            <div class="pricing border-r mt-4 p-3 w-75" style="background-color: #ffa400;">
+                                <b class="color-4">Wood Chair</b><br>
+                                <span class="text-white">$499</span>
+                                <button class="btn-click bg-white offset-8" data-toggle="modal" data-target="#menu_2">
+                                    <img src="img/Icon Cart.png" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <h1 class="color-7 offset-1">Creating <br> Futurine with <br> Passion and <br> Precision</h1>
+                <span class="offset-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In est quas adipisicing nam amet consectetur
+                    sequi.
+                </span>
+                <div class="row offset-1 mt-3">
+                    <div class="col-4 my-3 bg">
+                        <h2 class="text-center">
+                            18k+
+                            <p style="font-size: 16px; font-family: sans-serif;">Product</p>
+                        </h2>
+                    </div>
+                    <div class="col-4 my-3 ml-3 bg">
+                        <h2 class="text-center">
+                            15k+
+                            <p style="font-size: 16px; font-family: sans-serif;">Happy</p>
+                        </h2>
+                    </div>
+                </div>
+                <div class="row offset-1 mt-3">
+                    <div class="col-4 my-1 bg">
+                        <h2 class="text-center">
+                            20k+
+                            <p style="font-size: 16px; font-family: sans-serif;">Project</p>
+                        </h2>
+                    </div>
+                    <div class="col-4 my-1 ml-3 bg">
+                        <h2 class="text-center">
+                            20k+
+                            <p style="font-size: 16px; font-family: sans-serif;">Category</p>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5 p-0">
+                <img src="img/Rectangle 20.png" class="w-100" style="height: 100vh;position: relative !important;">
+                <button class="btn btn-warning rounded-pill py-2 ps-2">
+                    Read More
+                </button>
+            </div>
+        </div>
+
+        <!-- Card -->
+        <div class="row p-0 mt-5" style="background-color: #f5f3ef;">
+            <b class="color-3 ml-5">Discover the Artictry of <br> Our Furniture Collaction</b>
+        </div>
+        <p class="text-dark ml-5 my-3" style="font-size: 18px;">Lorem, ipsum dolor sit amet consectetur adipisicingelit.
+            <br> Quaerat veniam dolor, tempore vero dignissimos fuga.
+        </p>
+        <a href="#" class="carousel-control-prev" data-slide="prev" data-target="#myCarousel"
+            style="margin-left: 75rem !important;">
+            <span class="carousel-control-prev-icon hover mt_2"></span>
+        </a>
+        <a href="#" class="carousel-control-next" data-slide="next" data-target="#myCarousel">
+            <span class="carousel-control-next-icon hover mt_2"></span>
+        </a>
+        <div class="carousel slide my-4" data-ride="carousel" id="myCarousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row justify-content-around">
+                        <div class="col-2 p-0">
+                            <img src="img/product 1.png" class="img-fluid">
+                        </div>
+                        <div class="col-2 p-0">
+                            <img src="img/product 2.png" class="img-fluid">
+                        </div>
+                        <div class="col-2 p-0">
+                            <img src="img/product 3.png" class="img-fluid">
+                        </div>
+                        <div class="col-2 p-0">
+                            <img src="img/prodduct 4.png" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row justify-content-around">
+                        <div class="col-2 p-0">
+                            <img src="img/product 1.png" class="img-fluid">
+                        </div>
+                        <div class="col-2 p-0">
+                            <img src="img/product 2.png" class="img-fluid">
+                        </div>
+                        <div class="col-2 p-0">
+                            <img src="img/product 3.png" class="img-fluid">
+                        </div>
+                        <div class="col-2 p-0">
+                            <img src="img/prodduct 4.png" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center my-4">
+            <button class="btn btn-warning rounded-pill p-2 text-white my-4" style="width: 180px;">
+                Explore Now
+            </button>
+        </div>
+        <!-- /Card -->
+
+        <!-- Carousel -->
+        <div class="row p-0" style="background-color: #f5f3ef;">
+            <b class="color-3 ml-5">Hear What Our Customers <br>Have to Say</b>
+        </div>
+        <p class="text-dark ml-5 my-3" style="font-size: 18px;">Lorem, ipsum dolor sit amet consectetur adipisicingelit.
+            <br> Quaerat veniam dolor, tempore vero dignissimos fuga.
+        </p><br>
+        <div class="container-fluid-2 my-4 p-0">
+            <div class="owl-carousel nav-top">
+                <div class="item offset">
+                    <div class="course-card-2 shadow-none">
+                        <!-- <img src="img/wepik-export.png" style="width: 180px !important;"><br> -->
+                        <div class="pricing border-p p-3" style="background-color: #ffa400; width: 90%;height: 40vh;">
+                            <img src="img/Rectangle 9.png" style="width: 150px;">
+                            <div class="col-7">
+                                <b class="color-8 ml-1">
+                                    Jose Kovecek <br>
+                                </b>
+                                <span class="text-white font-weight-normal offset-" style="font-size: 14px;">Chief
+                                    Identity Specialist</span>
+                                <img src="img/Stars.png" class="my-2 ml-5" style="width: 70px;">
+                                <span class="offset-2 text-white my-4">Lorem ipsum dolor sit amet
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; consectetur adipisicing elit. Lorem ipsum
+                                    dolor sit.
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="item offset-4">
+                    <div class="course-card-2 shadow-none">
+                        <!-- <img src="img/wepik-export.png" style="width: 180px !important;"><br> -->
+                        <div class="pricing border-p p-3" style="background-color: #ffa400; width: 90%;height: 40vh;">
+                            <img src="img/Rectangle 9 (1).png" style="width: 150px;">
+                            <div class="col-7">
+                                <b class="color-8 ml-1">
+                                    Kelly Kovecek <br>
+                                </b>
+                                <span class="text-white font-weight-normal offset-" style="font-size: 14px;">Chief
+                                    Identity Specialist</span>
+                                <img src="img/Stars.png" class="my-2 ml-5" style="width: 70px;">
+                                <span class="offset-2 text-white my-4">Lorem ipsum dolor sit amet
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; consectetur adipisicing elit. Lorem ipsum
+                                    dolor sit.
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="item offset-8">
+                    <div class="course-card-2 shadow-none">
+                        <div class="pricing border-p p-3" style="background-color: #ffa400; width: 90%;height: 40vh;">
+                            <img src="img/Rectangle 9.png" style="width: 150px;">
+                            <div class="col-7">
+                                <b class="color-8 ml-1">
+                                    Jose Kovecek <br>
+                                </b>
+                                <span class="text-white font-weight-normal offset-" style="font-size: 14px;">Chief
+                                    Identity Specialist</span>
+                                <img src="img/Stars.png" class="my-2 ml-5" style="width: 70px;">
+                                <span class="offset-2 text-white my-4">Lorem ipsum dolor sit amet
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; consectetur adipisicing elit. Lorem ipsum
+                                    dolor sit.
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="item offset-8" style="display: none;">
+                    <div class="course-card-2 shadow-none">
+                        <div class="pricing border-p p-3" style="background-color: #ffa400; width: 90%;height: 40vh;">
+                            <img src="img/Rectangle 9.png" style="width: 150px;">
+                            <div class="col-7">
+                                <b class="color-8 ml-1">
+                                    Jose Kovecek <br>
+                                </b>
+                                <span class="text-white font-weight-normal offset-" style="font-size: 14px;">Chief
+                                    Identity Specialist</span>
+                                <img src="img/Stars.png" class="my-2 ml-5" style="width: 70px;">
+                                <span class="offset-2 text-white my-4">Lorem ipsum dolor sit amet
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; consectetur adipisicing elit. Lorem ipsum
+                                    dolor sit.
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Carousel -->
+
+        <!-- Footer -->
+        <div class="row mt-5 bg-2">
+            <b class="color-3 mt-4  ml-5">
+                Shop Now and Transform <br> Your Living Space
+                <p class="text-white" style="font-size: 15px;font-family:sans-serif;font-weight: normal;">
+                    Discount for the first purchase at Meablus 10% unconditional
+                </p>
+            </b>
+            <div class="col-7 ml-5 p-0">
+                <input type="text" class="form-control rounded-pill py-4"
+                    placeholder="Please enter your email address....">
+            </div>
+            <div class="col-2 ml-4 p-0">
+                <button class="btn btn-warning rounded-pill text-white" style="width: 180px;padding: 12px !important;">
+                    Subscirbe
+                </button>
+            </div>
+        </div>
+
+        <div class="row bg-3">
+            <div class="col-3 p-0">
+                <b class="color-9 ml-5">
+                    Meubles <br>
+                </b>
+                <span class="text-white ml-5" style="font-family: sans-serif;font-size: 15px !important;">
+                    Lorem ipsum dolor sit amet
+                    consectetur
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;adipisicing elit. Lorem ipsum
+                    dolor sit.
+
+                </span>
+            </div>
+            <div class="col-3 text-white p-0" style="cursor: pointer;">
+                <span class="my-4 ml-4">
+                    <a href="" class="text-white text-decoration-none"
+                        style="font-size: 25px;font-family: sans-serif;">Quick Links</a>
+                </span><br><br>
+                <span class="ml-4">
+                    <a href="" class="text-white text-decoration-none"
+                        style="font-size: 20px;font-family: sans-serif;">About Us</a>
+                </span><br>
+                <span class="ml-4">
+                    <a href="" class="text-white text-decoration-none"
+                        style="font-size: 20px;font-family: sans-serif;">best Sellers</a>
+                </span><br>
+                <span class="ml-4">
+                    <a href="" class="text-white text-decoration-none"
+                        style="font-size: 20px;font-family: sans-serif;">Our product</a>
+                </span><br>
+                <span class="ml-4">
+                    <a href="" class="text-white text-decoration-none"
+                        style="font-size: 20px;font-family: sans-serif;">Contact Us</a>
+                </span><br>
+            </div>
+            <div class="col-3 text-white p-0" style="cursor: pointer;">
+                <span class="my-4 ml-4">
+                    <a href="" class="text-white text-decoration-none"
+                        style="font-size: 25px;font-family: sans-serif;">Category</a>
+                </span><br><br>
+                <span class="ml-4">
+                    <a href="" class="text-white text-decoration-none"
+                        style="font-size: 20px;font-family: sans-serif;">Chair</a>
+                </span><br>
+                <span class="ml-4">
+                    <a href="" class="text-white text-decoration-none"
+                        style="font-size: 20px;font-family: sans-serif;">Lamp</a>
+                </span><br>
+                <span class="ml-4">
+                    <a href="" class="text-white text-decoration-none"
+                        style="font-size: 20px;font-family: sans-serif;">Sofa</a>
+                </span><br>
+                <span class="ml-4">
+                    <a href="" class="text-white text-decoration-none"
+                        style="font-size: 20px;font-family: sans-serif;">Cupboard</a>
+                </span><br>
+            </div>
+            <div class="col-3 text-white p-0" style="cursor: pointer;">
+                <span class="my-4 ml-4">
+                    <a href="" class="text-white text-decoration-none"
+                        style="font-size: 25px;font-family: sans-serif;">Follow Us</a>
+                </span><br><br>
+                <span class="ml-4">
+                    <a href="" class="text-white text-decoration-none"
+                        style="font-size: 20px;font-family: sans-serif;">Facebook</a>
+                </span><br>
+                <span class="ml-4">
+                    <a href="" class="text-white text-decoration-none"
+                        style="font-size: 20px;font-family: sans-serif;">Instagram</a>
+                </span><br>
+                <span class="ml-4">
+                    <a href="" class="text-white text-decoration-none"
+                        style="font-size: 20px;font-family: sans-serif;">Dribbble</a>
+                </span><br>
+                <span class="ml-4">
+                    <a href="" class="text-white text-decoration-none"
+                        style="font-size: 20px;font-family: sans-serif;">Behance</a>
+                </span><br>
+            </div>
+        </div>
+        <!-- /Footer -->
+    </div>
+</body>
+
+</html>
+<script src="index.js"></script>
+<script src="scripts/jQuery.min.js"></script>
+<script src="jquery-nice-select-1.1.0/jquery-nice-select-1.1.0/js/jquery.nice-select.min.js"></script>
+<script src="OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+<script src="scripts/popper.js"></script>
+<script src="scripts/bootstrap.min.js"></script>
+<!-- <script src="https://unpkg.com/scrollreveal"></script> -->
+<script src="scripts/app.js"></script>
